@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Menu, Drawer, Button } from 'antd';
 import { HomeOutlined, InfoCircleOutlined, PhoneOutlined, MenuOutlined, DollarOutlined, AppstoreOutlined } from '@ant-design/icons';
-import '../App.css'
+// import '../App.css'
+import {
+  Link
+} from "react-router-dom";
+
 const { Header } = Layout;
 
 const Navbar = () => {
@@ -47,7 +51,7 @@ const Navbar = () => {
         >
           <div
             style={{
-                marginLeft:"20px",
+                marginLeft:"35px",
                  color: 'white',
               fontWeight: 'bold',
               fontSize: '20px',
@@ -70,7 +74,7 @@ const Navbar = () => {
               }}
             />
           ) : (
-            // Desktop Menu
+            // Desktop Menu.Item
             <Menu
               theme="dark"
               mode="horizontal"
@@ -80,27 +84,27 @@ const Navbar = () => {
               }}
             >
               <Menu.Item key="1" icon={<HomeOutlined />}>
-                Home
+                <Link to="/">Home</Link>
               </Menu.Item>
-              <Menu.Item key="2" icon={<InfoCircleOutlined />}>
-                About
+              <Menu.Item key="2" icon={<InfoCircleOutlined />}> 
+              <Link to="/about">About</Link>
               </Menu.Item>
               <Menu.Item
                 key="3"
                 icon={<DollarOutlined />}
-                style={{ marginLeft: '20px' }} // Slightly shift to the right
+                // style={{ marginLeft: '20px' }} 
               >
-                Pricing
+                  <Link to="/pricing">Pricing</Link>
               </Menu.Item>
-              <Menu.Item key="4" icon={<AppstoreOutlined />}>
-                Services
+              <Menu.Item key="4" icon={<AppstoreOutlined />} >
+              <Link to="/services">Services</Link>
               </Menu.Item>
               <Menu.Item
                 key="5"
                 icon={<PhoneOutlined />}
-                style={{ marginLeft: '20px' }} // Slightly shift to the right
+                style={{ marginRight: '20px' }} 
               >
-                Contact
+               <Link to="/contact">Contact</Link>
               </Menu.Item>
             </Menu>
           )}
@@ -111,23 +115,23 @@ const Navbar = () => {
           title="MyApp"
           placement="right"
           onClose={onClose}
-          visible={visible}
+          open={visible}
         >
           <Menu mode="vertical">
             <Menu.Item key="1" icon={<HomeOutlined />} onClick={onClose}>
-              Home
+            <Link to="/">Home</Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<InfoCircleOutlined />} onClick={onClose}>
-              About
+            <Link to="/about">About</Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<DollarOutlined />} onClick={onClose}>
-              Pricing
+            <Link to="/pricing">Pricing</Link>
             </Menu.Item>
             <Menu.Item key="4" icon={<AppstoreOutlined />} onClick={onClose}>
-              Services
+            <Link to="/services">Services</Link>
             </Menu.Item>
             <Menu.Item key="5" icon={<PhoneOutlined />} onClick={onClose}>
-              Contact
+            <Link to="/contact">Contact</Link>
             </Menu.Item>
           </Menu>
         </Drawer>
@@ -137,3 +141,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
