@@ -45,4 +45,10 @@
   visibility: hidden;
 }
  
+.bg-linear{
+  color: #001529!important;   
+ }
 
+ .anton{
+  font-family: anton;
+ }
