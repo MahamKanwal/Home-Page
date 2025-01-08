@@ -4,7 +4,7 @@ const Pricing = () => {
   return (
     <>
       <h1 style={{ paddingTop: "100px" }} className='text-center display-5 fw-bold anton bg-linear'>Pricing</h1>
-      <div class="col-lg-6 mx-auto">
+      <div className="col-lg-6 mx-auto">
         <p className='mb-4 text-black text-center'>Our pricing section is thoughtfully designed to cater to a wide range of needs, 
           ensuring there’s a perfect plan for everyone. Whether you’re an individual just starting out or a business seeking advanced 
           features, we’ve got you covered. We prioritize transparency, so you’ll never encounter hidden fees or unexpected charges. 

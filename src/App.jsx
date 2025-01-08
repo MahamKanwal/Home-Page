@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
  import Navbar from './Components/Navbar';
  import Post from './Components/Post';
   import {
@@ -20,30 +22,14 @@ import './App.css';
     // let currentDate  = moment("20241230", "YYYYMMDD").fromNow()
     // console.log(currentDate)
 
-   let [isLit, setLit] = useState(true);
+    const [isLit, setIsLit] = useState(true);
 
-   function changeTheme() {
-     setLit(!isLit);
-     console.log(isLit);
-   }
+    const changeTheme = () => {
+      setIsLit(!isLit);
+    };
 
    return (
      <>
-  {/* <div
-         className={`min-h-screen flex justify-center items-center transition-all duration-500 ${
-           isLit ? "bg-white text-black" : "bg-gray-900 text-white"
-         }`}
-       >
-         <div className="text-center">
-          
-           <label>
-             <input
-               onClick={changeTheme}
-               className="hidden"
-               type="checkbox"
-             />
-             {isLit ? <GoSun size={30} /> : <FaMoon size={30} />}
-           </label> */}
 
      <Router>   
          <Navbar />
@@ -56,21 +42,19 @@ import './App.css';
          </Routes>
        </Router>  
        <div
-         className={`min-h-screen flex justify-center items-center transition-all duration-500 ${
-           isLit ? "bg-white text-black" : "bg-gray-900 text-white"
-         }`}
-       >
-         <div className="text-center">
-          
-           <label>
-             <input
-               onClick={changeTheme}
-               className="hidden"
-               type="checkbox"
-             />
-             {isLit ? <GoSun size={30} /> : <FaMoon size={30} />}
-           </label>
-
+      className={`min-h-screen w-full flex justify-center items-center transition-all duration-500 ${
+        isLit ? "bg-white text-black" : "bg-gray-900 text-white"
+      }`}
+    >
+      <div className="text-center">
+        <label>
+          <input
+            onClick={changeTheme}
+            className="hidden"
+            type="checkbox"
+          />
+          {isLit ? <GoSun size={30} /> : <FaMoon size={30} />}
+        </label>
  <Post/>
  
  </div>
