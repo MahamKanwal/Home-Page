@@ -16,6 +16,9 @@ import './App.css';
   import Services from './Pages/Services';
  import { GoSun } from "react-icons/go";
  import { FaMoon } from "react-icons/fa";
+ import ComponentOne from './Components/ComponentOne';
+import ComponentTwo from './Components/ComponentTwo';
+import { MdPadding } from 'react-icons/md';
 
  function App() {
 
@@ -59,6 +62,11 @@ import './App.css';
  
  </div>
  </div>
+
+ <ComponentOne style={{paddingTop:"1000px"}}/>
+ <br />
+ <br />
+ <ComponentTwo/>
     </>
    );
  }
