@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Menu, Drawer, Button } from 'antd';
 import { HomeOutlined, InfoCircleOutlined, PhoneOutlined, MenuOutlined, DollarOutlined, AppstoreOutlined } from '@ant-design/icons';
-// import '../App.css'
 import {
   Link
 } from "react-router-dom";
